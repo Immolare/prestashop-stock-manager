@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "arivaa-basic-expo",
+    "description": "Comprehensive set of UI Components and Architecture for React Native Projects",
+    "slug": "arivaa-basic-expo",
+    "privacy": "public",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laxaar.arivaa.basic",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.69935791112-89cdctlumqm5jlpl0p14fhupsi57pkva"
+        },
+        "googleMapsApiKey": "AIzaSyAWaF5kuBlvt1IHAAZY3LhvQFzfM49f5QQ",
+        "googleMobileAdsAppId": "ca-app-pub-5213082437607074~4041883374"
+      },
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "android": {
+      "package": "com.laxaar.arivaa.basic",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 3,
+      "config": {
+        "googleSignIn": {
+          "apiKey": "AIzaSyADawzOCej5ge0SJnXoiXocu3LO7P3QBTk",
+          "certificateHash": "21:18:EA:CD:15:4A:4A:24:E2:C5:7F:87:B8:52:BF:CE:4E:D1:01:A3"
+        },
+        "googleMaps": {
+          "apiKey": "AIzaSyC0-giTeoq0u7JCWpFT1CZWENg2P5czCOA"
+        },
+        "googleMobileAdsAppId": "ca-app-pub-5213082437607074~4492652978"
+      },
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "useNextNotificationsApi": true
+    },
+    "facebookScheme": "fb513432372363654",
+    "facebookAppId": "513432372363654",
+    "facebookDisplayName": "Arivaa Basic"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "verification.title": [
+    "Enter Verification Code",
+    "Entrez le code de vérification"
+  ],
+  "verification.message": [
+    "Please set your new password and click on submit",
+    "Veuillez entrer le code de vérification à 4 chiffres que vous avez reçu à votre adresse courriel."
+  ],
+  "verification.submit": ["Submit", "Soumettre"],
+  "verification.fail": ["Invalid Otp", "Otp invalide"],
+  "verification.success": ["Verification Successful", "Vérification réussie"]
+}

@@ -1,0 +1,20 @@
+{
+  "profile.error": [
+    "Error while fetching profile",
+    "Erreur lors de l'extraction du profil"
+  ],
+  "profile.saveError": [
+    "Error while saving profile",
+    "Erreur lors de la sauvegarde du profil"
+  ],
+  "profile.success": [
+    "Profile saved successfully",
+    "Profil enregistré avec succès"
+  ],
+  "profile.edit": ["Edit", "Modifier"],
+  "profile.name": ["Name", "Prénom"],
+  "profile.email": ["Email", "Email"],
+  "profile.phone": ["Phone No.", "Téléphone"],
+  "profile.save": ["Save", "Sauvegarder"],
+  "profile.changeImage": ["Change Image", "Changer l'image"]
+}
