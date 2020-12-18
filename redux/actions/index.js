@@ -2,7 +2,6 @@ import * as api from '../../constants/api';
 import { getAuthData } from '../../helpers/security';
 export const SAMPLE_ACTION = 'SAMPLE_ACTION';
 export const GET_SHOPS = 'GET_SHOPS';
-export const SELECT_SHOP = 'SELECT_SHOP';
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const FORGOT = 'FORGOT';
@@ -40,7 +39,7 @@ export const CHANGE_PASSWORD = 'CHANGE_PASSWORD';
  * @type {[*]}
  */
 export default [
-    {
+    { 
         name: SAMPLE_ACTION,
         config: {
             getData: () => {
@@ -56,18 +55,7 @@ export default [
     {
         name: UI_DELETE_PROPERTY,
     },
-    {
-        name: GET_SHOPS,
-        config: {
-            promise: true,
-        },
-    },
-    {
-        name: SELECT_SHOP,
-        config: {
-            promise: true,
-        },
-    },
+
     {
         name: LOGIN,
         config: {
@@ -109,10 +97,16 @@ export default [
         config: {},
     },
     {
-        name: GET_PROFILE,
+        name: GET_SHOPS,
         config: {
             promise: true,
         },
+    },
+    {
+        name: GET_PROFILE,
+        /*config: {
+            promise: true,
+        },*/
     },
     {
         name: VERIFY_OTP,

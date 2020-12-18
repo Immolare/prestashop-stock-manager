@@ -10,24 +10,6 @@ import {
 
 const LOGIN_KEY = 'loginData';
 
-export function checkAuthData(data) {
-    let makeRequest = axios.create();
-    const { credentials } = data;
-    const { endpoint, token } = credentials;
-
-    const requestConfig = {
-        url: `${endpoint}shops?display=[id, name]`,
-        method: 'get',
-        headers: {
-            'Authorization': `Basic ${token}`,
-            'Io-Format': 'JSON',
-            'Output-Format': 'JSON'
-        }
-    };
-    
-    return makeRequest(requestConfig);
-}
-
 /**
  * Save Authentication Data to Local Storage and Set Header
  * @param data

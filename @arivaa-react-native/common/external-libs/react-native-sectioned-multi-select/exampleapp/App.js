@@ -364,10 +364,6 @@ export default class App extends Component {
     }
   }
 
-
-  UNSAFE_componentWillMount() {
-   // this.fetchCategories()
-  }
   componentDidMount() {
     // programatically opening the select
     // this.SectionedMultiSelect._toggleSelector();

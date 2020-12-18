@@ -1,69 +1,51 @@
+import React, { Dimensions } from 'react-native';
 import { Colors } from '@arivaa-react-native/common/styles';
-import React from 'react-native';
+
+let deviceWidth = Dimensions.get('window').width;
+let deviceHeight = Dimensions.get('window').height;
 
 var styles = React.StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white',
-        padding: 20,
-    },
-    logoContainer: {
-        marginTop: 50,
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignSelf: 'stretch',
-        width: 150,
-        height: 150,
-    },
-    headerContainer: {
-        alignItems: 'center',
-        alignSelf: 'stretch',
-    },
-    headerTitle: {
-        alignSelf: 'center',
-        fontWeight: 'bold',
-        fontSize: 16
-    },
-    separator: {
-        height: 1,
-        width: 50,
-        backgroundColor: '#ff9599',
-        marginTop: 8,
-        alignSelf: 'center'
-    },
-    form: {
-        alignSelf: 'stretch',
-        paddingTop: 40,
-    },
-    input: {
-        marginBottom: 10,
-    },
-    label: {
-        fontWeight: 'bold',
-        marginBottom: 10,
-    },
-    required: {
-        fontWeight: 'bold',
-        color: Colors.brandRed,
-    },
-    field: {
-        marginBottom: 10,
-    },
-    button: {
-        backgroundColor: Colors.primaryColor,
-        borderColor: Colors.primaryColor,
-        marginTop: 10,
-    },
-    buttonText: {
-        fontSize: 14,
-        color: '#fff',
-    },
-    input: {
-        backgroundColor: Colors.inputBackgroundColor,
-    },
-    inputIcon: {
-        width: 18,
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  imageContainer: {
+    flex: 1,
+    alignItems: 'stretch',
+    overflow: 'hidden',
+  },
+  image: {
+    flex: 1,
+    width: deviceWidth / 2,
+  },
+  trigger: {
+    position: 'absolute',
+    left: -24,
+    top: deviceHeight / 3,
+  },
+  triggerIcon: {
+    width: 60,
+    height: 100,
+  },
+  link: {
+    height: 80,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  linkView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    fontWeight: 'bold',
+    color: Colors.brandGrey,
+    marginRight: 8,
+  },
+  icon: {
+    fontSize: 50,
+    color: Colors.primaryColor,
+  },
 });
 
 export default styles;

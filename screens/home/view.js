@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './styles';
-import { Text, View, Image, ScrollView } from 'react-native';
-import { Link, Form, Select } from '@arivaa-react-native/common';
-import { Colors } from '@arivaa-react-native/common/styles';
-import envelope from '../../assets/envelope.png';
-import logo from '../../assets/logo.png';
-
+import { Text, View, Image } from 'react-native';
+import { Link } from '@arivaa-react-native/common';
+import girl from '../../assets/girl.jpg';
+import left from '../../assets/left.png';
 import { Icon } from '@arivaa-react-native/common';
 
 /**
@@ -13,51 +11,29 @@ import { Icon } from '@arivaa-react-native/common';
  * @returns {XML}
  */
 var view = function () {
-    const { drawer, navigation, translate, shopList } = this.props;
-    const { selectShop } = this.validations;
-
-    const formElements = [
-        {
-            name: 'shop',
-            customElement: <Select data={shopList} multiple={false} type="modal" />,
-            before: (
-                <Text style={[styles.label]}>
-                    {translate('login.headerSelectShop')} <Text style={[styles.required]}>*</Text>
-                </Text>
-            ),
-            options: selectShop,
-        },
-    ];
-
+    const { user, drawer, navigation } = this.props;
     return (
         <View style={[styles.container]}>
-            <ScrollView>
-                <View style={[styles.logoContainer]}>
-                    <Image resizeMode="contain" source={logo} style={[styles.logo]} />
-                </View>
-                <View style={[styles.headerContainer]}>
-                    <Text style={[styles.headerTitle]}>{translate('login.oneMoreStep')}</Text>
-                </View>
-                <View style={[styles.separator]} />
-                <View style={[styles.form]}>
-                    <Form
-                        elements={formElements}
-                        style={{
-                            Body: styles.list,
-                        }}
-                        onSubmit={this.onSubmit.bind(this)}
-                        submitTrigger={{
-                            buttonProps: {
-                                style: styles.button,
-                            },
-                            textProps: {
-                                style: styles.buttonText,
-                            },
-                            text: translate('login.labelSelectShop'),
-                        }}
-                    />
-                </View>
-            </ScrollView>
+            <View style={[styles.imageContainer]}>
+                <Image resizeMode="contain" source={user.logo ? { uri: `data:${user.logo.mimeType};base64,${user.logo.base64}` } : girl} style={[styles.image]} />
+                {!navigation.state.isDrawerOpen ? (
+                    <Link onPress={this.openDrawer.bind(this)} style={[styles.trigger]}>
+                        <Image
+                            resizeMode="cover"
+                            source={left}
+                            style={styles.triggerIcon}
+                        />
+                    </Link>
+                ) : null}
+            </View>
+            <View style={[styles.new]}>
+                <Link style={[styles.link]} link="elements">
+                    <View style={[styles.linkView]}>
+                        <Text style={[styles.text]}>Try UI Component Demos</Text>
+                        <Icon type="foundation" style={[styles.icon]} name="burst-new" />
+                    </View>
+                </Link>
+            </View>
         </View>
     );
 };

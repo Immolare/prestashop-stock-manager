@@ -30,7 +30,9 @@
     "@arivaa-react/*"
   ],
   "dependencies": {
+    "@expo/vector-icons": "^12.0.2",
     "axios-mock-adapter": "^1.18.2",
+    "buffer": "^6.0.3",
     "expo": "^39.0.0",
     "expo-ads-admob": "~8.3.0",
     "expo-ads-facebook": "~8.4.0",

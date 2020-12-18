@@ -1,5 +1,5 @@
 import { getError } from '@arivaa-react/redux';
-import { GET_SHOPS, SELECT_SHOP } from '../actions';
+import { GET_SHOPS } from '../actions';
 
 /**
  * Reducer Function
@@ -12,15 +12,6 @@ export default function (state = null, action) {
         case GET_SHOPS:
             if (!getError(action)) {
                 let data = action.payload.data.shops;
-                return {
-                    ...data,
-                };
-            } else {
-                return null;
-            }
-        case SELECT_SHOP:
-            if (!getError(action)) {
-                let data = action.payload.data.shop;
                 return {
                     ...data,
                 };

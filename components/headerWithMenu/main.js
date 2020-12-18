@@ -9,37 +9,37 @@ import { GET_PROFILE, UI_SET_PROPERTY } from '../../redux/actions';
  * @author Inderdeep
  */
 class Main extends Component {
-  /**
-   * Constructor
-   * @param props
-   */
-  constructor(props) {
-    super(props);
-  }
+    /**
+     * Constructor
+     * @param props
+     */
+    constructor(props) {
+        super(props);
+    }
 
-  /**
-   * ComponentDidMount Hook
-   */
-  componentDidMount() {
-    this.props.getProfile();
-  }
+    /**
+     * ComponentDidMount Hook
+     */
+    componentDidMount() {
+        this.props.getProfile();
+    }
 
-  /**
-   * Open Drawer
-   */
-  openDrawer() {
-    const { navigation, openDrawer } = this.props;
-    navigation.openDrawer();
-    openDrawer();
-  }
+    /**
+     * Open Drawer
+     */
+    openDrawer() {
+        const { navigation, openDrawer } = this.props;
+        navigation.openDrawer();
+        openDrawer();
+    }
 
-  /**
-   * Render Method
-   * @returns {*}
-   */
-  render() {
-    return ComponentView.bind(this)();
-  }
+    /**
+     * Render Method
+     * @returns {*}
+     */
+    render() {
+        return ComponentView.bind(this)();
+    }
 }
 
 /**
@@ -48,28 +48,28 @@ class Main extends Component {
  * @returns {{Object}}
  */
 const bindAction = (dispatch) => {
-  return {
-    /**
-     * Save Profile Action Creator
-     * @param drawerId
-     */
-    getProfile: (data) => {
-      return dispatch(createAction(GET_PROFILE, data));
-    },
-    /**
-     * Open Drawer Action Creator
-     * to store drawer state
-     *
-     */
-    openDrawer: () => {
-      return dispatch(
-        createAction(UI_SET_PROPERTY, {
-          name: 'drawer',
-          value: true,
-        })
-      );
-    },
-  };
+    return {
+        /**
+         * Save Profile Action Creator
+         * @param drawerId
+         */
+        getProfile: (data) => {
+            return dispatch(createAction(GET_PROFILE, data));
+        },
+        /**
+         * Open Drawer Action Creator
+         * to store drawer state
+         *
+         */
+        openDrawer: () => {
+            return dispatch(
+                createAction(UI_SET_PROPERTY, {
+                    name: 'drawer',
+                    value: true,
+                })
+            );
+        },
+    };
 };
 /**
  * Bind State to props
@@ -77,10 +77,10 @@ const bindAction = (dispatch) => {
  * @returns {{Object}}
  */
 const mapStateToProps = (state) => {
-  return {};
+    return {};
 };
 Main.displayName = 'Header-With-Menu';
 export default preProcess(Main, {
-  connect: [mapStateToProps, bindAction],
-  localize: true,
+    connect: [mapStateToProps, bindAction],
+    localize: true,
 });

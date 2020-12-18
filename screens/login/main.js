@@ -140,7 +140,7 @@ export async function login(provider, credentials) {
          * https://github.com/react-navigation/react-navigation/issues/2599
          * Comment by javidjamae
          */
-        navigation.navigate('secured');
+        navigation.navigate('configure');
 
         Toast.success(translate('login.success'));
     } catch (e) {

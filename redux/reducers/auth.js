@@ -28,7 +28,6 @@ export default function (state = null, action) {
                     ...data,
                 };
             }
-        
         case CHECK_LOGIN:
             if (action.error) {
                 return null;
